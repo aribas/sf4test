@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        <table>
+            {% for script in scripts %}
+                <tr>
+                    <td>{{ script.id }}</td>
+                    <td>{{ script.getCreationDate().format('Y-m-d') }}</td>
+                    <td>{{ script.user }}</td>
+                    <td>{{ script.comment }}</td>
+                    <td>{{ script.filename }}</td>
+                    <td>{{ script.type }}</td>
+                    <td>{{ script.status }}</td>
+                    <td>{{ script.session }}</td>
+                    <td>{{ script.getSerialNumber() }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
