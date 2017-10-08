@@ -1,27 +1,2 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-<div class="container">
-    <div class="dino-header text-center">
-        <h1>Journey to the Center of the Earth</h1>
-        <h2 class="journey-font">DINOSAURS!</h2>
-    </div>
-    <div class="row">
-    <table>
-        {% for script in scripts %}
-            <tr>
-                <td>{{ script.id }}</td>
-                <td>{{ script.getCreationDate().format('Y-m-d') }}</td>
-                <td>{{ script.user }}</td>
-                <td>{{ script.comment }}</td>
-                <td>{{ script.filename }}</td>
-                <td>{{ script.type }}</td>
-                <td>{{ script.status }}</td>
-                <td>{{ script.session }}</td>
-                <td>{{ script.getSerialNumber() }}</td>
-            </tr>
-        {% endfor %}
-    </table>
-    </div>
-</div>
-{% endblock %}

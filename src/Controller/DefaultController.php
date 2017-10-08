@@ -13,12 +13,9 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $scripts = $this->getDoctrine()
-            ->getRepository(Script::class)
-            ->findAllOrderedBySerialNumber();
-
-        return $this->render('default/index.html.twig', [
-            'scripts' => $scripts
-        ]);
+        return $this->redirectToRoute('script_list');
+        //return $this->render('default/index.html.twig', [
+        //    //'scripts' => $scripts
+        //]);
     }
 }
