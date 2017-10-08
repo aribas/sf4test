@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table>
+        {% for script in scripts %}
+            <tr>
+                <td>{{ script.id }}</td>
+                <td>{{ script.getCreationDate().format('Y-m-d') }}</td>
+                <td>{{ script.user }}</td>
+                <td>{{ script.comment }}</td>
+                <td>{{ script.filename }}</td>
+                <td>{{ script.type }}</td>
+                <td>{{ script.status }}</td>
+                <td>{{ script.session }}</td>
+                <td>{{ script.getSerialNumber() }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

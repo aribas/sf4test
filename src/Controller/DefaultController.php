@@ -17,7 +17,7 @@ class DefaultController extends Controller
             ->getRepository(Script::class)
             ->findAllOrderedBySerialNumber();
 
-        return $this->render('base.html.twig', [
+        return $this->render('default/index.html.twig', [
             'scripts' => $scripts
         ]);
     }
