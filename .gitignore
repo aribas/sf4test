@@ -1,4 +1,9 @@
 .idea
+/node_modules
+/public/css
+/public/js
+/public/fonts
+/src/Resources/assets/rev-manifest.json
 ###> symfony/framework-bundle ###
 .env
 /public/bundles/

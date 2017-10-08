@@ -5,6 +5,7 @@
         "php": "^7.0.8",
         "sensio/framework-extra-bundle": "^4.0",
         "sensiolabs/security-checker": "^4.1",
+        "symfony/asset": "^3.3",
         "symfony/console": "^3.3",
         "symfony/debug-pack": "^1.0",
         "symfony/form": "^3.3",

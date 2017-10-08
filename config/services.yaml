@@ -37,3 +37,8 @@ services:
         autowire: true
         tags:
             - { name: doctrine.event_subscriber }
+
+    App\Twig\AssetVersionExtension:
+        arguments: ["%kernel.root_dir%"]
+        tags:
+            - { name: twig.extension }

@@ -1,6 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div class="container">
+    <div class="dino-header text-center">
+        <h1>Journey to the Center of the Earth</h1>
+        <h2 class="journey-font">DINOSAURS!</h2>
+    </div>
+    <div class="row">
     <table>
         {% for script in scripts %}
             <tr>
@@ -16,4 +22,6 @@
             </tr>
         {% endfor %}
     </table>
+    </div>
+</div>
 {% endblock %}
