@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @Route("/script")
- * #@Security("is_granted('ROLE_USER')")
+ * @Security("is_granted('ROLE_USER')")
  */
 class ScriptController extends Controller
 {
@@ -20,8 +20,6 @@ class ScriptController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $this->denyAccessUnlessGranted('ROLE_USER');
-
         $scripts = $this->getDoctrine()
             ->getRepository(Script::class)
             ->findAllOrderedBySerialNumber();

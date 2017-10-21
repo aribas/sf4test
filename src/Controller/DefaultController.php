@@ -14,8 +14,5 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         return $this->redirectToRoute('script_list');
-        //return $this->render('default/index.html.twig', [
-        //    //'scripts' => $scripts
-        //]);
     }
 }

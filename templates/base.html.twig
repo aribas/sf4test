@@ -19,8 +19,16 @@
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="{{ path('homepage') }}">
-                <img src="{{ asset('img/dino-logo.png') }}" alt="Dino logo">
+                Tasko
             </a>
+        </div>
+        <div class="navbar-right">
+                {% if is_granted('ROLE_USER') %}
+                    {{ app.user.email }}<a class="navbar-brand" href="{{ path('security_logout') }}"><span class="fa fa-lock"/>&nbsp;Logout</a>
+                {% else %}
+                    <!--<a class="navbar-brand" href="{{ path('security_login') }}"><span class="fa fa-unlock">Login</span></a>-->
+                {% endif %}
+
         </div>
     </div>
 </nav>
@@ -30,10 +38,10 @@
 <div class="navbar-inverse navbar-static-bottom" role="navigation">
     <div class="container">
         <div class="navbar-text">
-            <p>Gulp for Symfony! With your guide KnpUniversity</p>
+            <p>Gulp for Symfony!</p>
         </div>
         <div class="navbar-text navbar-right">
-            <p>Dino image credit to <a href="http://dinosaurs.about.com/od/typesofdinosaurs/tp/dinosaurgroups.htm" class="navbar-link">about.com</a></p>
+            <p><a href="#" class="navbar-link">CS MAX GmbH</a></p>
         </div>
         <div class="clearfix">
         </div>

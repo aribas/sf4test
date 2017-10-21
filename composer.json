@@ -8,6 +8,7 @@
         "symfony/asset": "^3.3",
         "symfony/console": "^3.3",
         "symfony/debug-pack": "^1.0",
+        "symfony/expression-language": "^3.3",
         "symfony/form": "^3.3",
         "symfony/framework-bundle": "^3.3",
         "symfony/monolog-bundle": "^3.1",

@@ -2,15 +2,28 @@
 
 {% block body %}
 <div class="container">
-    <div class="dino-header text-center">
-        <h1>Journey to the Center of the Earth</h1>
-        <h2 class="journey-font">DINOSAURS!</h2>
+    <div class="text-center">
+        <h1>frinch update scripts</h1>
     </div>
     <div class="row">
-    <table>
+    <table class="table">
+        <thead class="thead-default">
+        <tr>
+            <th>#</th>
+            <th>Creation Date</th>
+            <th>User</th>
+            <th>Comment</th>
+            <th>Filename</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Session</th>
+            <th>Serial Number</th>
+        </tr>
+        </thead>
         {% for script in scripts %}
+            <tbody>
             <tr>
-                <td>{{ script.id }}</td>
+                <th scope="row">{{ script.id }}</th>
                 <td>{{ script.getCreationDate().format('Y-m-d') }}</td>
                 <td>{{ script.user }}</td>
                 <td>{{ script.comment }}</td>
@@ -20,6 +33,7 @@
                 <td>{{ script.session }}</td>
                 <td>{{ script.getSerialNumber() }}</td>
             </tr>
+            </tbody>
         {% endfor %}
     </table>
     </div>
