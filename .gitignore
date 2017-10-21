@@ -4,10 +4,20 @@
 /public/js
 /public/fonts
 /src/Resources/assets/rev-manifest.json
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
 ###> symfony/framework-bundle ###
 .env
 /public/bundles/
-/var/
 /vendor/
 ###< symfony/framework-bundle ###
 
